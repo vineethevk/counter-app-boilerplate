@@ -13,7 +13,10 @@ function App() {
       if (count === 1) {
         if (!disable) { setDisable(true) }
       }
-      setCount((count) => (count + value))
+      if (count >= 1) {
+        setCount((count) => (count + value))
+      }
+
     }
   }
   return (
