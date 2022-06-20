@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [disable, setDisable] = useState(true);
   const handleCount = (value) => {
-    if ((count > -1) && value === 1) {
+    if ((count >= 0) && value === 1) {
       if (disable) { setDisable(false) }
       setCount((count) => (count + value))
     } else if ((count >= 0) && value === -1) {
